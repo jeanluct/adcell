@@ -1,4 +1,4 @@
-= adcell
+# adcell
 
 Matlab code for solving the advection-diffusion equation for a
 two-dimensional incompressible autonomous flow.
