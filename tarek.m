@@ -1,7 +1,5 @@
 function tarek
 
-addpath ~/C/jlt/matlab
-
 % Parameters.
 N = 501; l = 2*pi; ks = 1; L = ks*l; Diff = .01; dt = .05; tmax = 10;
 
