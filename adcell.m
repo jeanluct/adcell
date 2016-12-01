@@ -1,4 +1,4 @@
-addpath ~/C/jlt/matlab
+addpath extern
 
 % Number of gridpoints
 N = 201;

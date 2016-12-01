@@ -2,7 +2,7 @@ function adcell_run(runname)
 
 if nargin < 1, runname = '1'; end
 
-addpath ~/C/jlt/matlab
+addpath extern
 
 switch runname
  % classic cellular, large diff
