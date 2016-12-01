@@ -1,16 +1,20 @@
-How to use the Matlab code for solving the advection-diffusion
-equation of an autonomous flow:
+= adcell
+
+Matlab code for solving the advection-diffusion equation for a
+two-dimensional incompressible autonomous flow.
 
 ## Installation
 
-- Clone the `adcell` project.
+- Clone the `adcell` project: `git clone git@gitlab.com:jeanluc/adcell.git`.
 
-- *here explain how to get `fft2udotgrad_helper.c`, or add to repo.*
+- After starting Matlab, `cd` to the `extern` subfolder of the
+  `adcell` project, and run `mex fft2udotgrad_helper.c` from within
+  Matlab.  You might need to use the `-largeArrayDims` option if
+  Matlab complains.  This will compile a helper function for filling
+  the sparse matrix of the Fourier-space operator u.grad in the
+  advection-diffusion equation.
 
-- After starting Matlab, cd to the directory where you unzipped the
-  files.  Then run `mex fft2udotgrad_helper.c` within Matlab.  This
-  will compile a helper function for filling the sparse matrix of the
-  Fourier-space operator u.grad in the advection-diffusion equation.
+- Now `cd ..` to come back to the root folder of the `adcell` project.
 
 You're now ready to run the program!
 
