@@ -39,6 +39,7 @@ Nplot = N+100;
 % system for the chosen implicit scheme.
 Niter = ceil(tmax/dt);
 covar = zeros(Niter,2,2);
+thetavar = zeros(Niter,1);
 for it = 1:Niter
   switch lower(intdecomp.method)
    case 'imidpoint'
@@ -68,7 +69,11 @@ for it = 1:Niter
   covar(it,1,2) = sum(sum(xx.*yy.*unpk(theta)))/int - meanx*meany;
   covar(it,2,1) = covar(it,1,2);
   covar(it,2,2) = sum(sum(yy.^2.*unpk(theta)))/int - meany^2;
+
+  % Compute scalar variance.
+  thetavar(it) = var(theta);
 end
 
 if nargout > 0, varargout{1} = covar; end
 if nargout > 1, varargout{2} = Mov; end
+if nargout > 2, varargout{3} = thetavar; end
