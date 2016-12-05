@@ -36,7 +36,6 @@ switch runname
   xlabel('$t$','Interpreter','LaTeX','FontSize',22)
   ylabel('$\langle x^2 \rangle$','Interpreter','LaTeX','FontSize',22)
   set(gca,'FontSize',18,'FontName','Times')
-  print -dpdf cellular_D1_var.pdf
  
  % classic cellular, moderate diff
  case {'2'}
@@ -124,8 +123,3 @@ switch runname
   theta = 1/(2*pi*l0^2)*pk(exp(-((xx - icx).^2 + (yy - icy).^2)/(2*l0^2)));
   adcell_integrate(lu,theta,tmax,L)
 end
-
-
-figure(1)
-%print -dpdf -zbuffer -painters cellular_D1.pdf
-print -dpng cellular_D1.png
