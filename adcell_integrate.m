@@ -59,6 +59,7 @@ for it = 1:Niter
   axis square, axis xy
   xlabel('x'), ylabel('y')
   title(sprintf('t = %g',it*dt))
+  drawnow
   if domovie, Mov(it) = getframe; end
 
   % Compute covariance.
