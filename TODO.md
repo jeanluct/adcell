@@ -1,5 +1,7 @@
 * Make +adcell subfolder.
 
+* Increase max before complaining about lack of MEX file?
+
 * Rename functions to adcell.setp, etc. syntax.
 
 * Add 'isempty' option for default arguments.
