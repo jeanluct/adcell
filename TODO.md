@@ -1,19 +1,23 @@
-* Make +adcell subfolder.
+* Make `+adcell` subfolder.
 
-* Increase max before complaining about lack of MEX file?
+* Include `lecture28.tex` writeup as a doc?
 
-* Rename functions to adcell.setp, etc. syntax.
+* Increase max before complaining about lack of MEX file?  It's
+  hardwired in `fft2dotgrad.m`, so I'm loath to change it.
 
-* Add 'isempty' option for default arguments.
+* Rename functions to `adcell.setup`, etc. syntax.
 
-* Make private folder?  But I think right now all the functions are
+* Add `isempty` option for default arguments.
+
+* Make `private` folder?  But I think right now all the functions are
   used.
 
-* 'examples' folder?
+* `examples` folder?  Rename `tarek.m` to something more
+  illustrative.  Maybe `onecell.m`?
 
 * Help messages!
 
-* Write adcell.effdiff function.  Returns Deff and optional chi.
+* Write `adcell.effdiff` function.  Returns Deff and optional chi.
   Compare to large-D limiting form.
 
 * To get ready for eventual distribution:
@@ -22,4 +26,4 @@
 
   * Add boilerplate to m-files.
 
-  * Don't forget to credit `fourdif` aurhors.  No license?
+  * Don't forget to credit `fourdif` authors.  No license?

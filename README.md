@@ -5,7 +5,10 @@ two-dimensional incompressible autonomous flow.
 
 ## Installation
 
-- Clone the `adcell` project: `git clone git@gitlab.com:jeanluc/adcell.git`.
+- Clone the `adcell` project:
+  ```
+  git clone git@gitlab.com:jeanluc/adcell.git
+  ```
 
 - After starting Matlab, `cd` to the `extern` subfolder of the
   `adcell` project, and run `mex fft2udotgrad_helper.c` from within
