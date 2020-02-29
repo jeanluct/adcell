@@ -1,5 +1,5 @@
 The files in the `extern` folder are from *jlt lib*
-(https://github.com/jeanluct/jlt), version 1baaad6, released under the
+(https://github.com/jeanluct/jlt), version ebf60b4, released under the
 [MIT License](https://github.com/jeanluct/jlt/raw/master/LICENSE).
 
 The Fourier differentiation matrix function `fourdif.m` was written by
