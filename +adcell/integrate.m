@@ -1,4 +1,7 @@
 function varargout = integrate(intdecomp,theta0,tmax,L)
+%INTEGRATE   Integrate advection-diffusion equation.
+%
+%   See also ADCELL.ADFFT, ADCELL.DECOMP.
 
 % Record movie frames?
 if nargout > 1, domovie = true; else, domovie = false; end

@@ -1,4 +1,7 @@
 function intdecomp = decomp(Ak,dt,intmethod)
+%DECOMP   Matrix decomposition of integrator for advection-diffusion equation.
+%
+%   See also ADCELL.ADFFT, ADCELL.INTEGRATE.
 
 if nargin < 3, intmethod = 'imidpoint'; end  % Integration method
 
@@ -24,8 +27,9 @@ intdecomp.dt = dt;
 [L,U,P,Q,R] = lu(B);  % L and U are the two largest memory hogs.
 
 % Check accuracy of decomposition.
-if full(max(max(abs(B - R*(P'*(L*(U*(Q')))))))) > 1e-10
-  error('The LU decomposition seems dubious...')
+decomperr = full(max(max(abs(B - R*(P'*(L*(U*(Q'))))))));
+if decomperr > 1e-10
+  warning('Matrix decomposition error = %g',decomperr)
 end
 
 intdecomp.L = L;
