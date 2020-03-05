@@ -21,7 +21,7 @@ psi = (sqrt(2)*U*l/2/pi) * sin(2*pi*xx/l).*sin(2*pi*yy/l);
 
 fprintf('Peclet number = %g\n',U*l/Diff)
 
-Ak = adcell.setup(psi,Diff,L); % fill advection-diffusion sparse matrix
+Ak = adcell.adfft(psi,Diff,L); % fill advection-diffusion sparse matrix
 lu = adcell.decomp(Ak);        % LU-decomposition of integrator
 
 % Initial condition.

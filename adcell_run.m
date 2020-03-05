@@ -13,7 +13,7 @@ switch runname
   % Streamfunction
   U = 1; psi = (sqrt(2)*U*l/2/pi) * sin(2*pi*xx/l).*sin(2*pi*yy/l);
 
-  Ak = adcell.setup(psi,Diff,L); % fill advection-diffusion sparse matrix
+  Ak = adcell.adfft(psi,Diff,L); % fill advection-diffusion sparse matrix
   lu = adcell.decomp(Ak);        % LU-decomposition of integrator
 
   % Initial condition.
@@ -45,7 +45,7 @@ switch runname
   % Streamfunction
   U = 1; psi = (sqrt(2)*U*l/2/pi) * sin(2*pi*xx/l).*sin(2*pi*yy/l);
 
-  Ak = adcell.setup(psi,Diff,L); % fill advection-diffusion sparse matrix
+  Ak = adcell.adfft(psi,Diff,L); % fill advection-diffusion sparse matrix
   lu = adcell.decomp(Ak);        % LU-decomposition of integrator
 
   % Initial condition.
@@ -61,7 +61,7 @@ switch runname
   % Streamfunction
   U = 1; psi = (sqrt(2)*U*l/2/pi) * sin(2*pi*xx/l).*sin(2*pi*yy/l);
 
-  Ak = adcell.setup(psi,Diff,L); % fill advection-diffusion sparse matrix
+  Ak = adcell.adfft(psi,Diff,L); % fill advection-diffusion sparse matrix
   lu = adcell.decomp(Ak);        % LU-decomposition of integrator
 
   % Initial condition.
@@ -79,7 +79,7 @@ switch runname
   % Streamfunction
   U = 1; psi = (sqrt(2)*U*l/2/pi) * sin(2*pi*xx/l).*sin(2*pi*yy/l);
 
-  Ak = adcell.setup(psi,Diff,L); % fill advection-diffusion sparse matrix
+  Ak = adcell.adfft(psi,Diff,L); % fill advection-diffusion sparse matrix
   lu = adcell.decomp(Ak);        % LU-decomposition of integrator
 
   % Initial condition.
@@ -97,7 +97,7 @@ switch runname
   A = -1; B = 1;
   psi = (l/2/pi) * (B*sin(2*pi*yy/l) + A*cos(2*pi*xx/l));
 
-  Ak = adcell.setup(psi,Diff,L); % fill advection-diffusion sparse matrix
+  Ak = adcell.adfft(psi,Diff,L); % fill advection-diffusion sparse matrix
   lu = adcell.decomp(Ak);        % LU-decomposition of integrator
 
   % Initial condition.
@@ -115,7 +115,7 @@ switch runname
   A = -1.3; B = 1;
   psi = (l/2/pi) * (B*sin(2*pi*yy/l) + A*cos(2*pi*xx/l));
 
-  Ak = adcell.setup(psi,Diff,L); % fill advection-diffusion sparse matrix
+  Ak = adcell.adfft(psi,Diff,L); % fill advection-diffusion sparse matrix
   lu = adcell.decomp(Ak);        % LU-decomposition of integrator
 
   % Initial condition.

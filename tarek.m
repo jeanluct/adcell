@@ -10,7 +10,7 @@ x = L*(0:N-1)/N; y = x'; [xx,yy] = meshgrid(x,y);
 % Streamfunction
 U = 1; psi = (sqrt(2)*U*l/2/pi) * sin(2*pi*xx/l).*sin(2*pi*yy/l);
 
-Ak = adcell.setup(psi,Diff,L); % fill advection-diffusion sparse matrix
+Ak = adcell.adfft(psi,Diff,L); % fill advection-diffusion sparse matrix
 lu = adcell.decomp(Ak,dt);     % LU-decomposition of integrator
 
 % Initial condition.
