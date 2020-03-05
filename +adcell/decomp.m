@@ -3,18 +3,21 @@ function intdecomp = decomp(Ak,dt,intmethod)
 %
 %   See also ADCELL.ADFFT, ADCELL.INTEGRATE.
 
-if nargin < 3, intmethod = 'imidpoint'; end  % Integration method
+if nargin < 3 || isempty(intmethod)
+  % Default integration method.
+  intmethod = 'imidpoint';
+end
 
 switch lower(intmethod)
  case 'imidpoint'
   % Use implicit midpoint method.
-  if nargin < 2, dt = .1; end
+  if nargin < 2 || isempty(dt), dt = .1; end  % default timestep
   B = speye(size(Ak)) - .5*dt*Ak;
   C = speye(size(Ak)) + .5*dt*Ak;
   intdecomp.C = C;
  case 'ieuler'
   % Use implicit Euler method.
-  if nargin < 2, dt = .025; end
+  if nargin < 2 || isempty(dt), dt = .025; end  % default timestep
   B = speye(size(Ak)) - dt*Ak;
  otherwise
   error('Unknown integration scheme.')

@@ -3,8 +3,6 @@
 * Increase max before complaining about lack of MEX file?  It's
   hardwired in `fft2dotgrad.m`, so I'm loath to change it.
 
-* Add `isempty` option for default arguments.
-
 * Make `private` folder?  But I think right now all the functions are
   used.  Function to return k vectors?  (Add to jlt.)
 

@@ -6,8 +6,8 @@ function varargout = integrate(intdecomp,theta0,tmax,L)
 % Record movie frames?
 if nargout > 1, domovie = true; else, domovie = false; end
 
-if nargin < 4, L = 2*pi; end
-if nargin < 3, tmax = 20; end                % Integration time
+if nargin < 4 || isempty(L), L = 2*pi; end
+if nargin < 3 || isempty(tmax), tmax = 20; end    % Integration time
 
 dt = intdecomp.dt;
 Lo = intdecomp.L;
