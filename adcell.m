@@ -21,8 +21,8 @@ psi = (sqrt(2)*U*l/2/pi) * sin(2*pi*xx/l).*sin(2*pi*yy/l);
 
 fprintf('Peclet number = %g\n',U*l/Diff)
 
-Ak = adcell_setup(psi,Diff,L); % fill advection-diffusion sparse matrix
-lu = adcell_decomp(Ak);        % LU-decomposition of integrator
+Ak = adcell.setup(psi,Diff,L); % fill advection-diffusion sparse matrix
+lu = adcell.decomp(Ak);        % LU-decomposition of integrator
 
 % Initial condition.
 % Gaussian centred on the middle cell.  It is wide enough to almost
@@ -31,7 +31,7 @@ l0 = .12*l/2; icx = L/2; icy = icx;
 theta = 1/(2*pi*l0^2)*pk(exp(-((xx - icx).^2 + (yy - icy).^2)/(2*l0^2)));
 
 % Integrate the advection-diffusion equation up to tmax.
-covar = adcell_integrate(lu,theta,tmax,L);
+covar = adcell.integrate(lu,theta,tmax,L);
 
 % Plot covariance.
 t = lu.dt*(1:size(covar,1));

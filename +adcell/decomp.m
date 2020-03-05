@@ -1,4 +1,4 @@
-function intdecomp = adcell_decomp(Ak,dt,intmethod)
+function intdecomp = decomp(Ak,dt,intmethod)
 
 if nargin < 3, intmethod = 'imidpoint'; end  % Integration method
 

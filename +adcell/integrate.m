@@ -1,4 +1,4 @@
-function varargout = adcell_integrate(intdecomp,theta0,tmax,L)
+function varargout = integrate(intdecomp,theta0,tmax,L)
 
 % Record movie frames?
 if nargout > 1, domovie = true; else, domovie = false; end

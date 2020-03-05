@@ -1,11 +1,7 @@
-* Make `+adcell` subfolder.
-
 * Include `lecture28.tex` writeup as a doc?
 
 * Increase max before complaining about lack of MEX file?  It's
   hardwired in `fft2dotgrad.m`, so I'm loath to change it.
-
-* Rename functions to `adcell.setup`, etc. syntax.
 
 * Add `isempty` option for default arguments.
 

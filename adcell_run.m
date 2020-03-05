@@ -13,15 +13,15 @@ switch runname
   % Streamfunction
   U = 1; psi = (sqrt(2)*U*l/2/pi) * sin(2*pi*xx/l).*sin(2*pi*yy/l);
 
-  Ak = adcell_setup(psi,Diff,L); % fill advection-diffusion sparse matrix
-  lu = adcell_decomp(Ak);        % LU-decomposition of integrator
+  Ak = adcell.setup(psi,Diff,L); % fill advection-diffusion sparse matrix
+  lu = adcell.decomp(Ak);        % LU-decomposition of integrator
 
   % Initial condition.
   l0 = .12*l/2; icx = L/2; icy = icx;
   theta = 1/(2*pi*l0^2)*pk(exp(-((xx - icx).^2 + (yy - icy).^2)/(2*l0^2)));
 
   % Integrate the advection-diffusion equation up to tmax.
-  covar = adcell_integrate(lu,theta,tmax,L);
+  covar = adcell.integrate(lu,theta,tmax,L);
 
   % Plot covariance.
   t = lu.dt*(1:size(covar,1));
@@ -45,13 +45,13 @@ switch runname
   % Streamfunction
   U = 1; psi = (sqrt(2)*U*l/2/pi) * sin(2*pi*xx/l).*sin(2*pi*yy/l);
 
-  Ak = adcell_setup(psi,Diff,L); % fill advection-diffusion sparse matrix
-  lu = adcell_decomp(Ak);        % LU-decomposition of integrator
+  Ak = adcell.setup(psi,Diff,L); % fill advection-diffusion sparse matrix
+  lu = adcell.decomp(Ak);        % LU-decomposition of integrator
 
   % Initial condition.
   l0 = .12*l/2; icx = L/2; icy = icx;
   theta = 1/(2*pi*l0^2)*pk(exp(-((xx - icx).^2 + (yy - icy).^2)/(2*l0^2)));
-  adcell_integrate(lu,theta,tmax,L)
+  adcell.integrate(lu,theta,tmax,L)
 
  % classic cellular, small diff
  case {'3'}
@@ -61,15 +61,15 @@ switch runname
   % Streamfunction
   U = 1; psi = (sqrt(2)*U*l/2/pi) * sin(2*pi*xx/l).*sin(2*pi*yy/l);
 
-  Ak = adcell_setup(psi,Diff,L); % fill advection-diffusion sparse matrix
-  lu = adcell_decomp(Ak);        % LU-decomposition of integrator
+  Ak = adcell.setup(psi,Diff,L); % fill advection-diffusion sparse matrix
+  lu = adcell.decomp(Ak);        % LU-decomposition of integrator
 
   % Initial condition.
   l0 = .12*l/2; icx = L/2; icy = icx;
   theta = 1/(2*pi*l0^2)*pk(exp(-((xx - icx).^2 + (yy - icy).^2)/(2*l0^2)));
 
   % Integrate the advection-diffusion equation up to tmax.
-  adcell_integrate(lu,theta,tmax,L)
+  adcell.integrate(lu,theta,tmax,L)
 
  % classic cellular, very small diff
  case {'4'}
@@ -79,13 +79,13 @@ switch runname
   % Streamfunction
   U = 1; psi = (sqrt(2)*U*l/2/pi) * sin(2*pi*xx/l).*sin(2*pi*yy/l);
 
-  Ak = adcell_setup(psi,Diff,L); % fill advection-diffusion sparse matrix
-  lu = adcell_decomp(Ak);        % LU-decomposition of integrator
+  Ak = adcell.setup(psi,Diff,L); % fill advection-diffusion sparse matrix
+  lu = adcell.decomp(Ak);        % LU-decomposition of integrator
 
   % Initial condition.
   l0 = .12*l/2; icx = L/2; icy = icx;
   theta = 1/(2*pi*l0^2)*pk(exp(-((xx - icx).^2 + (yy - icy).^2)/(2*l0^2)));
-  adcell_integrate(lu,theta,tmax,L)
+  adcell.integrate(lu,theta,tmax,L)
 
  % truncated ABC, closed streamlines
  % See Crisanti et al. (1990).
@@ -97,13 +97,13 @@ switch runname
   A = -1; B = 1;
   psi = (l/2/pi) * (B*sin(2*pi*yy/l) + A*cos(2*pi*xx/l));
 
-  Ak = adcell_setup(psi,Diff,L); % fill advection-diffusion sparse matrix
-  lu = adcell_decomp(Ak);        % LU-decomposition of integrator
+  Ak = adcell.setup(psi,Diff,L); % fill advection-diffusion sparse matrix
+  lu = adcell.decomp(Ak);        % LU-decomposition of integrator
 
   % Initial condition.
   l0 = .12*l/2; icx = L/2; icy = icx;
   theta = 1/(2*pi*l0^2)*pk(exp(-((xx - icx).^2 + (yy - icy).^2)/(2*l0^2)));
-  adcell_integrate(lu,theta,tmax,L)
+  adcell.integrate(lu,theta,tmax,L)
 
  % truncated ABC, open streamlines
  % See Crisanti et al. (1990).
@@ -115,11 +115,11 @@ switch runname
   A = -1.3; B = 1;
   psi = (l/2/pi) * (B*sin(2*pi*yy/l) + A*cos(2*pi*xx/l));
 
-  Ak = adcell_setup(psi,Diff,L); % fill advection-diffusion sparse matrix
-  lu = adcell_decomp(Ak);        % LU-decomposition of integrator
+  Ak = adcell.setup(psi,Diff,L); % fill advection-diffusion sparse matrix
+  lu = adcell.decomp(Ak);        % LU-decomposition of integrator
 
   % Initial condition.
   l0 = .12*l/2; icx = L/2; icy = icx;
   theta = 1/(2*pi*l0^2)*pk(exp(-((xx - icx).^2 + (yy - icy).^2)/(2*l0^2)));
-  adcell_integrate(lu,theta,tmax,L)
+  adcell.integrate(lu,theta,tmax,L)
 end

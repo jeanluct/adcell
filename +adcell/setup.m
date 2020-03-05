@@ -1,4 +1,4 @@
-function [Ak,ux,uy] = adcell_setup(psi,Diff,L)
+function [Ak,ux,uy] = setup(psi,Diff,L)
 
 if nargin < 3, L = 2*pi; end
 
