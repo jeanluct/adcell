@@ -10,7 +10,7 @@
 * Add `isempty` option for default arguments.
 
 * Make `private` folder?  But I think right now all the functions are
-  used.
+  used.  Function to return k vectors?  (Add to jlt.)
 
 * `examples` folder?  Rename `tarek.m` to something more
   illustrative.  Maybe `onecell.m`?

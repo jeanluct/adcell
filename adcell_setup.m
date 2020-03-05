@@ -1,4 +1,4 @@
-function Ak = adcell_setup(psi,Diff,L)
+function [Ak,ux,uy] = adcell_setup(psi,Diff,L)
 
 if nargin < 3, L = 2*pi; end
 
@@ -18,7 +18,7 @@ k = k1*ik;
 [kx,ky] = meshgrid(k,k');
 
 % Fourier differentiation matrices.
-[x0,D] = fourdif(N,1); D = k1*D; clear x0
+[~,D] = fourdif(N,1); D = k1*D;
 ux = D*psi;  % ux =  dpsi/dy (act on columns)
 uy = psi*D;  % uy = -dpsi/dx (act on rows)
 
