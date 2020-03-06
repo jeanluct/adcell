@@ -1,13 +1,16 @@
 * Include `lecture28.tex` writeup as a doc?
 
-* Increase max before complaining about lack of MEX file?  It's
-  hardwired in `fft2dotgrad.m`, so I'm loath to change it.
-
 * Make `private` folder?  But I think right now all the functions are
   used.  Function to return k vectors?  (Add to jlt.)
 
 * `examples` folder?  Rename `tarek.m` to something more
   illustrative.  Maybe `onecell.m`?
+
+* Check sign of u.  The operator should be -u.grad?
+
+* Laplacian function to return diffusive part only.  This is useful so
+  we can make many Ak's for different diffusivities with recomputing
+  u.grad.
 
 * Help messages!
 
