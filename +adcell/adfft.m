@@ -1,9 +1,9 @@
 function [Ak,uxk,uyk] = adfft(psi,Diff,L)
 %ADFFT   Fourier transform of the advection-diffusion operator.
 %   AK = ADFFT(PSI) returns the discrete Fourier transform AK of the 2D
-%   advection operator A = U d/dx + V d/dy with velocity streamfunction PSI.
-%   The streamfunction is defined on a spatial, periodic grid of size N x N.
-%   The components U and V are given by
+%   advection operator A = -U d/dx - V d/dy with velocity streamfunction
+%   PSI.  The streamfunction is defined on a spatial, periodic grid of size
+%   N x N.  The components U and V are given by
 %
 %     U = d(PSI)/dy,  V = -d(PSI)/dx.
 %
@@ -11,7 +11,7 @@ function [Ak,uxk,uyk] = adfft(psi,Diff,L)
 %   (N^2-1), with the constant (k=0) mode dropped.
 %
 %   AK = ADFFT(PSI,D) returns the discrete Fourier transform AK of the 2D
-%   advection-diffusion operator A = (U d/dx + V d/dy - D laplacian) with
+%   advection-diffusion operator A = (-U d/dx - V d/dy + D laplacian) with
 %   diffusivity D.
 %
 %   AK = ADFFT(PSI,D,L) also specifies the domain size L (default 2*PI).
