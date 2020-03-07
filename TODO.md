@@ -1,5 +1,8 @@
 * Include `lecture28.tex` writeup as a doc?
 
+% Allow nonsquare grid.  Need to change unpk, and allows for [Lx Ly]
+  and [k1x k1y].
+
 * Make `private` folder?  But I think right now all the functions are
   used.  Function to return k vectors?  (Add to jlt.)
 

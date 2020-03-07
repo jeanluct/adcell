@@ -2,7 +2,7 @@ function [Ak,uxk,uyk] = adfft(psi,Diff,L)
 %ADFFT   Fourier transform of the advection-diffusion operator.
 %   AK = ADFFT(PSI) returns the discrete Fourier transform AK of the 2D
 %   advection operator A = -U d/dx - V d/dy with velocity streamfunction
-%   PSI.  The streamfunction is defined on a spatial, periodic grid of size
+%   PSI.  The streamfunction is defined on a spatially-periodic grid of size
 %   N x N.  The components U and V are given by
 %
 %     U = d(PSI)/dy,  V = -d(PSI)/dx.
@@ -20,7 +20,7 @@ function [Ak,uxk,uyk] = adfft(psi,Diff,L)
 %   UK and VK of the velocity components U and V, with the constant (k=0)
 %   mode dropped.  UK and VK are column-vectors of size N^2-1.
 %
-%   See also ADCELL.DECOMP, ADCELL.INTEGRATE.
+%   See also ADCELL.VEL, ADCELL.DECOMP, ADCELL.INTEGRATE.
 
 if nargin < 1 || isempty(psi)
   % Sample streamfunction psi.
@@ -38,7 +38,7 @@ if nargin < 3 || isempty(L), L = 2*pi; end
 N = size(psi,1);
 
 if N ~= size(psi,2)
-  % TODO: allow nonsquare.
+  % TODO: allow nonsquare.  Need to change unpk.
   error('Streamfunction must be a square matrix.')
 end
 
@@ -50,10 +50,9 @@ kmin = floor(-(N-1)/2); kmax = floor((N-1)/2); ik = [0 1:kmax kmin:-1];
 k = k1*ik;
 [kx,ky] = meshgrid(k,k');
 
-% Fourier differentiation matrices.
-[~,D] = fourdif(N,1); D = k1*D;
-ux = D*psi;  % ux =  dpsi/dy (act on columns)
-uy = psi*D;  % uy = -dpsi/dx (act on rows)
+% Velocity components, scaled to domain size L = 2*pi/k1.
+[ux,uy] = adcell.vel(psi);
+ux = k1*ux; uy = k1*uy;
 
 % This is the function that does all the work: return the FFT of
 % the u.grad opetator.
