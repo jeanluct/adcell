@@ -29,6 +29,7 @@ if nargin < 1 || isempty(psi)
   % Spatial domain grid.
   x = 2*pi*ks*(0:N-1)/N; y = x';
   [xx,yy] = meshgrid(x,y);
+  % Streamfunction, with cell-averaged energy 1.
   psi = sqrt(2) * sin(xx).*sin(yy);
 end
 
