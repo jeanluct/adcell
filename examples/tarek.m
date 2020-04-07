@@ -1,9 +1,10 @@
 function tarek
 
-addpath extern
+addpath ..
+addpath ../extern
 
 % Parameters.
-N = 501; l = 2*pi; ks = 1; L = ks*l; Diff = .01; dt = .05; tmax = 10;
+N = 501; l = 2*pi; ks = 1; L = ks*l; Diff = .001; dt = .05; tmax = 10;
 
 x = L*(0:N-1)/N; y = x'; [xx,yy] = meshgrid(x,y);
 

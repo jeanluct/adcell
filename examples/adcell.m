@@ -4,7 +4,8 @@
 % See the file LICENSE for copying permission.
 %
 
-addpath extern
+addpath ..
+addpath ../extern
 
 % Number of gridpoints
 N = 201;
