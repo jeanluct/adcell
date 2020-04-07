@@ -41,14 +41,17 @@ You're now ready to run the program!
   which determines how many cells fill the domain.  For `ks=4`, there
   will seem to be 8 cells in each direction, since they come in pairs.
 
-- See the `examples` folder.
+- See the `examples` folder for more sample code.
+
+- You can see a demo of the program with commentary in this [lecture][1].
 
 ## License
 
-*adcell* is released under the [MIT License][1].  It uses [*jlt
-lib*][2] and the Fourier differentiation matrix function
-[fourdif.m][3] written by S. C. Reddy and J. A. C. Weideman.
+*adcell* is released under the [MIT License][2].  It uses [*jlt
+lib*][3] and the Fourier differentiation matrix function
+[fourdif.m][4] written by S. C. Reddy and J. A. C. Weideman.
 
-[1]: https://github.com/jeanluct/adcell/raw/master/LICENSE
-[1]: https://github.com/jeanluct/jlt
-[2]: http://appliedmaths.sun.ac.za/~weideman/research/differ.html
+[1]: https://youtu.be/-uqkG1i3UHU
+[2]: https://github.com/jeanluct/adcell/raw/master/LICENSE
+[3]: https://github.com/jeanluct/jlt
+[4]: http://appliedmaths.sun.ac.za/~weideman/research/differ.html
