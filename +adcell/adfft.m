@@ -22,6 +22,12 @@ function [Ak,uxk,uyk] = adfft(psi,Diff,L)
 %
 %   See also ADCELL.VEL, ADCELL.DECOMP, ADCELL.INTEGRATE.
 
+%
+% Copyright (c) 2016-2020 Jean-Luc Thiffeault <jeanluc@mailaps.org>
+%
+% See the file LICENSE for copying permission.
+%
+
 if nargin < 1 || isempty(psi)
   % Sample streamfunction psi.
   % Number of gridpoints and number of full cells.

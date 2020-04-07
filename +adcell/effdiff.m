@@ -6,6 +6,12 @@ function [varargout] = effdiff(psi,Diff,L)
 %
 %   See also ADCELL.VEL, ADCELL.ADFFT.
 
+%
+% Copyright (c) 2016-2020 Jean-Luc Thiffeault <jeanluc@mailaps.org>
+%
+% See the file LICENSE for copying permission.
+%
+
 if nargin < 3 || isempty(L)
   L = 2*pi;
 end

@@ -1,5 +1,11 @@
 function adcell_run(runname)
 
+%
+% Copyright (c) 2016-2020 Jean-Luc Thiffeault <jeanluc@mailaps.org>
+%
+% See the file LICENSE for copying permission.
+%
+
 if nargin < 1, runname = '1'; end
 
 addpath extern

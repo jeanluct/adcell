@@ -3,6 +3,12 @@ function intdecomp = decomp(Ak,dt,intmethod)
 %
 %   See also ADCELL.ADFFT, ADCELL.INTEGRATE.
 
+%
+% Copyright (c) 2016-2020 Jean-Luc Thiffeault <jeanluc@mailaps.org>
+%
+% See the file LICENSE for copying permission.
+%
+
 if nargin < 3 || isempty(intmethod)
   % Default integration method.
   intmethod = 'imidpoint';

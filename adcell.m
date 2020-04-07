@@ -1,3 +1,9 @@
+%
+% Copyright (c) 2016-2020 Jean-Luc Thiffeault <jeanluc@mailaps.org>
+%
+% See the file LICENSE for copying permission.
+%
+
 addpath extern
 
 % Number of gridpoints

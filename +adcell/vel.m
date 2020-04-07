@@ -10,6 +10,12 @@ function [ux,uy] = vel(psi)
 %
 %   See also ADCELL.ADFFT, ADCELL.DECOMP, ADCELL.INTEGRATE.
 
+%
+% Copyright (c) 2016-2020 Jean-Luc Thiffeault <jeanluc@mailaps.org>
+%
+% See the file LICENSE for copying permission.
+%
+
 N = size(psi,1);
 
 if N ~= size(psi,2)

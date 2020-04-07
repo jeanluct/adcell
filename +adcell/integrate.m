@@ -3,6 +3,12 @@ function varargout = integrate(intdecomp,theta0,tmax,L)
 %
 %   See also ADCELL.ADFFT, ADCELL.DECOMP.
 
+%
+% Copyright (c) 2016-2020 Jean-Luc Thiffeault <jeanluc@mailaps.org>
+%
+% See the file LICENSE for copying permission.
+%
+
 % Record movie frames?
 if nargout > 1, domovie = true; else, domovie = false; end
 
