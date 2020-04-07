@@ -22,7 +22,7 @@ two-dimensional incompressible autonomous cellular flow.
   advection-diffusion equation.
 
 - If you cannot compile the MEX file, you'll be limited to `N=31`
-  Fourier modes.
+  Fourier modes in each spatial direction.
 
 - Now `cd ..` to come back to the root folder of the *adcell* project.
 
