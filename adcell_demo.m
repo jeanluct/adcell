@@ -1,4 +1,4 @@
-function adcell_run(runname)
+function adcell_demo(demoname)
 
 %
 % Copyright (c) 2016-2020 Jean-Luc Thiffeault <jeanluc@mailaps.org>
@@ -6,13 +6,13 @@ function adcell_run(runname)
 % See the file LICENSE for copying permission.
 %
 
-if nargin < 1, runname = '1'; end
+if nargin < 1, demoname = '1'; end
 
 addpath extern
 
-switch runname
+switch demoname
  % classic cellular, large diff
- case {'1','run1','low-Pe'}
+ case {'1','demo1','low-Pe'}
   N = 201; l = 2*pi; ks = 10; L = ks*l; Diff = 1; tmax = 20;
   x = L*(0:N-1)/N; y = x'; [xx,yy] = meshgrid(x,y);
 
@@ -44,7 +44,7 @@ switch runname
   set(gca,'FontSize',18,'FontName','Times')
  
  % classic cellular, moderate diff
- case {'2'}
+ case {'2','demo2','moderate-Pe'}
   N = 301; l = 2*pi; ks = 8; L = ks*l; Diff = .1; tmax = 40;
   x = L*(0:N-1)/N; y = x'; [xx,yy] = meshgrid(x,y);
 
@@ -60,7 +60,7 @@ switch runname
   adcell.integrate(lu,theta,tmax,L)
 
  % classic cellular, small diff
- case {'3'}
+ case {'3','demo3','large-Pe'}
   N = 501; l = 2*pi; ks = 6; L = ks*l; Diff = .01; tmax = 40;
   x = L*(0:N-1)/N; y = x'; [xx,yy] = meshgrid(x,y);
 
@@ -78,7 +78,7 @@ switch runname
   adcell.integrate(lu,theta,tmax,L)
 
  % classic cellular, very small diff
- case {'4'}
+ case {'4','demo4','huge-Pe'}
   N = 1201; l = 2*pi; ks = 6; L = ks*l; Diff = .001; tmax = 40;
   x = L*(0:N-1)/N; y = x'; [xx,yy] = meshgrid(x,y);
 
@@ -95,7 +95,7 @@ switch runname
 
  % truncated ABC, closed streamlines
  % See Crisanti et al. (1990).
- case {'5'}
+ case {'5','demo5','abc-closed'}
   N = 401; l = 2*pi; ks = 6; L = ks*l; Diff = .01; tmax = 40;
   x = L*(0:N-1)/N; y = x'; [xx,yy] = meshgrid(x,y);
 
@@ -113,7 +113,7 @@ switch runname
 
  % truncated ABC, open streamlines
  % See Crisanti et al. (1990).
- case {'6'}
+ case {'6','demo6','abc-open'}
   N = 401; l = 2*pi; ks = 6; L = ks*l; Diff = .01; tmax = 40;
   x = L*(0:N-1)/N; y = x'; [xx,yy] = meshgrid(x,y);
 

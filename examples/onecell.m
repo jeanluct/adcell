@@ -1,4 +1,6 @@
-function tarek
+function onecell
+
+% Simulate a single cell with high resolution.
 
 addpath ..
 addpath ../extern
