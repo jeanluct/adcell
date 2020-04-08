@@ -1,5 +1,9 @@
 # adcell
 
+![demo1][demo1]
+![demo2][demo2]
+![demo3][demo3]
+
 Matlab code for solving the advection-diffusion equation for a
 two-dimensional incompressible autonomous cellular flow.
 
@@ -55,3 +59,6 @@ lib*][3] and the Fourier differentiation matrix function
 [2]: https://github.com/jeanluct/adcell/raw/master/LICENSE
 [3]: https://github.com/jeanluct/jlt
 [4]: http://appliedmaths.sun.ac.za/~weideman/research/differ.html
+[demo1]: https://github.com/jeanluct/adcell/raw/master/img/demo1.png
+[demo2]: https://github.com/jeanluct/adcell/raw/master/img/demo2.png
+[demo3]: https://github.com/jeanluct/adcell/raw/master/img/demo3.png
