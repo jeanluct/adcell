@@ -1,8 +1,6 @@
 # adcell
 
-![demo1][demo1]
-![demo2][demo2]
-![demo3][demo3]
+![demos][demos]
 
 Matlab code for solving the advection-diffusion equation for a
 two-dimensional incompressible autonomous cellular flow.
@@ -36,6 +34,8 @@ You're now ready to run the program!
 
 - Run `adcell_demo('demoX')`, where `X` is a number from 1 to 6.  The
   argument specifies which flow and set of parameter values are used.
+  The banner above is the output of `'demo1'`, `'demo2'`, and
+  `'demo3'` at the final time.
 
 - You can add your own run parameters by adding a case in the `switch`
   statement at the top of `adcell_demo`: you can specify the diffusion
@@ -59,6 +59,7 @@ lib*][3] and the Fourier differentiation matrix function
 [2]: https://github.com/jeanluct/adcell/raw/master/LICENSE
 [3]: https://github.com/jeanluct/jlt
 [4]: http://appliedmaths.sun.ac.za/~weideman/research/differ.html
+[demos]: https://github.com/jeanluct/adcell/raw/master/img/demos_small.png
 [demo1]: https://github.com/jeanluct/adcell/raw/master/img/demo1_small.png
 [demo2]: https://github.com/jeanluct/adcell/raw/master/img/demo2_small.png
 [demo3]: https://github.com/jeanluct/adcell/raw/master/img/demo3_small.png
