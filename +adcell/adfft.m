@@ -62,8 +62,8 @@ k = k1*ik;
 ux = k1*ux; uy = k1*uy;
 
 % This is the function that does all the work: return the FFT of
-% the u.grad opetator.
-Ak = fft2udotgrad(ux,uy,L);
+% the -u.grad opetator.
+Ak = -fft2udotgrad(ux,uy,L);
 
 % Verify non-diffusive part is antihermitian.
 aherr = full(max(max(abs(Ak+Ak'))));
